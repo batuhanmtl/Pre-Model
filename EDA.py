@@ -34,3 +34,7 @@ def cat_summary(dataframe, col_name, plot=False):
 
     if dataframe[col_name].dtypes == "bool":
         dataframe[col_name] = dataframe[col_name].astype(int)
+
+        print(pd.DataFrame({col_name: dataframe[col_name].value_counts(),
+                            "Ratio": 100 * dataframe[col_name].value_counts() / len(dataframe)}))
+        print("##########################################")
