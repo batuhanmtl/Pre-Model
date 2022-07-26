@@ -110,3 +110,5 @@ def grab_outliers(dataframe, col_name, index=False):
     :param index: bool
     :return: list of outlier index
     """
+
+    low, up = outlier_thresholds(dataframe, col_name)
