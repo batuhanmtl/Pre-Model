@@ -29,3 +29,12 @@ def outlier_thresholds(dataframe, col_name, q1=0.25, q3=0.75):
 
 
 # Checking for outliers
+
+def check_outlier(dataframe, col_name):
+    """
+    It checks if there are any outliers.
+    :param dataframe: Pandas.DataFrame
+    :param col_name: string
+    Variable name whose outliers will be check
+    :return: bool
+    """
