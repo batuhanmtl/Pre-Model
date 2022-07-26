@@ -16,3 +16,5 @@ def outlier_thresholds(dataframe, col_name, q1=0.25, q3=0.75):
     """
 
     quartile1 = dataframe[col_name].quantile(q1)
+
+    quartile3 = dataframe[col_name].quantile(q3)
