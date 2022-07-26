@@ -247,3 +247,6 @@ def one_hot_encoder(dataframe, categorical_cols, drop_first=True):
     :param drop_first: bool
     :return: One-Hot encoded dataframe
     """
+
+    dataframe = pd.get_dummies(dataframe, columns=categorical_cols,
+                               drop_first=drop_first)
