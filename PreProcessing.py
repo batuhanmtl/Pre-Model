@@ -205,3 +205,5 @@ def missing_vs_target(dataframe, target, na_columns):
 
     :return: no return
     """
+
+    temp_df = dataframe.copy()
