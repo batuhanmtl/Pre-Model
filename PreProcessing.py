@@ -250,3 +250,5 @@ def one_hot_encoder(dataframe, categorical_cols, drop_first=True):
 
     dataframe = pd.get_dummies(dataframe, columns=categorical_cols,
                                drop_first=drop_first)
+
+    return dataframe
