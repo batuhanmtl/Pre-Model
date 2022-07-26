@@ -210,3 +210,6 @@ def missing_vs_target(dataframe, target, na_columns):
 
     for col in na_columns:
         temp_df[col + '_NA_FLAG'] = np.where(temp_df[col].isnull(), 1, 0)
+
+
+    na_flags = temp_df.loc[:, temp_df.columns.str.contains("_NA_")].columns
