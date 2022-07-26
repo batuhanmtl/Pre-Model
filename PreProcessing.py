@@ -271,3 +271,6 @@ def rare_analyser(dataframe, target, cat_cols):
         print(pd.DataFrame({"COUNT": dataframe[col].value_counts(),
                             "RATIO": dataframe[col].value_counts() / len(dataframe),
                             "TARGET_MEAN": dataframe.groupby(col)[target].mean()}), end="\n\n\n")
+
+
+# Rare Encoder
