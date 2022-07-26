@@ -238,3 +238,12 @@ def label_encoder(dataframe, binary_col):
 
 
 # One-Hot Encoding
+
+def one_hot_encoder(dataframe, categorical_cols, drop_first=True):
+    """
+
+    :param dataframe: Pandas.DataFrame
+    :param categorical_cols: Name list of categorical variables
+    :param drop_first: bool
+    :return: One-Hot encoded dataframe
+    """
