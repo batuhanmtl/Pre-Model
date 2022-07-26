@@ -285,3 +285,6 @@ def rare_encoder(dataframe, rare_perc):
     """
 
     temp_df = dataframe.copy()
+
+    rare_columns = [col for col in temp_df.columns if temp_df[col].dtypes == 'O'
+                    and (temp_df[col].value_counts() / len(temp_df) < rare_perc).any(axis=None)]
