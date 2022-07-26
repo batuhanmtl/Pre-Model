@@ -70,3 +70,5 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
         num_but_cat is inside cat_cols.
 
     """
+
+    # cat_cols, cat_but_car
