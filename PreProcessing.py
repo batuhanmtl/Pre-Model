@@ -83,3 +83,5 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
     cat_cols = cat_cols + num_but_cat
 
     cat_cols = [col for col in cat_cols if col not in cat_but_car]
+
+    num_cols = [col for col in dataframe.columns if dataframe[col].dtypes in ["int", "float"]]
