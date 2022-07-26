@@ -186,3 +186,6 @@ def missing_values_table(dataframe, na_name=False):
 
     if na_name:
         return na_columns
+
+
+# Examining the Relationship of Missing Values with the Dependent Variable
