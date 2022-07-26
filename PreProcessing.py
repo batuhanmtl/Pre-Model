@@ -173,3 +173,5 @@ def missing_values_table(dataframe, na_name=False):
     :return: list of the names of the
     variables with missing values
     """
+
+    na_columns = [col for col in dataframe.columns if dataframe[col].isnull().sum() > 0]
