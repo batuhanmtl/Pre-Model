@@ -20,3 +20,14 @@ def check_df(dataframe, head=5):
     print(dataframe.isnull().sum())
     print("##################### Quantiles #####################")
     print(dataframe.describe([0, 0.05, 0.50, 0.95, 0.99, 1]).T)
+
+# Category Variable Analysis
+
+def cat_summary(dataframe, col_name, plot=False):
+    """
+        It shows the ratio and frequencies of the categorical variables in the variable with each other.
+        :param dataframe: Data set(Pandas.DataFrame)
+        :param col_name: The variable name-string- you want to see the frequency and ratios of.
+        :param plot: bool
+        :return: no return
+        """
