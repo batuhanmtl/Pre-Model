@@ -40,3 +40,5 @@ def check_outlier(dataframe, col_name):
     """
 
     low_limit, up_limit = outlier_thresholds(dataframe, col_name)
+
+    if dataframe[(dataframe[col_name] > up_limit) | (dataframe[col_name] < low_limit)].any(axis=None):
