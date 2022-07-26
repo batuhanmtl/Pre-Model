@@ -135,3 +135,5 @@ def remove_outlier(dataframe, col_name):
     variable name to delete outlier
     :return: outlier deleted dataframe
     """
+
+    low_limit, up_limit = outlier_thresholds(dataframe, col_name)
