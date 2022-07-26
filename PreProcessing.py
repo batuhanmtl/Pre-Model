@@ -236,3 +236,5 @@ def label_encoder(dataframe, binary_col):
 
     return dataframe
 
+
+# One-Hot Encoding
