@@ -183,3 +183,6 @@ def missing_values_table(dataframe, na_name=False):
     missing_df = pd.concat([n_miss, np.round(ratio, 2)], axis=1, keys=['n_miss', 'ratio'])
 
     print(missing_df, end="\n")
+
+    if na_name:
+        return na_columns
