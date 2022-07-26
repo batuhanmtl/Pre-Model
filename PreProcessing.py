@@ -122,3 +122,6 @@ def grab_outliers(dataframe, col_name, index=False):
     if index:
         outlier_index = dataframe[((dataframe[col_name] < low) | (dataframe[col_name] > up))].index
         return outlier_index
+
+
+# Delete outlier value
