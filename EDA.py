@@ -31,3 +31,6 @@ def cat_summary(dataframe, col_name, plot=False):
         :param plot: bool
         :return: no return
         """
+
+    if dataframe[col_name].dtypes == "bool":
+        dataframe[col_name] = dataframe[col_name].astype(int)
