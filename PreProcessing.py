@@ -219,3 +219,12 @@ def missing_vs_target(dataframe, target, na_columns):
 
 
 # Label Encoding
+
+def label_encoder(dataframe, binary_col):
+    """
+    Encodes variables consisting of 2 classes
+
+    :param dataframe: Pandas.DataFrame
+    :param binary_col: binary variable name list
+    :return: Encoded dataframe
+    """
