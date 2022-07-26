@@ -232,3 +232,5 @@ def label_encoder(dataframe, binary_col):
     from sklearn.preprocessing import LabelEncoder
 
     labelencoder = LabelEncoder()
+    dataframe[binary_col] = labelencoder.fit_transform(dataframe[binary_col])
+
