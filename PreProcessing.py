@@ -81,3 +81,5 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
                    dataframe[col].nunique() > 20 and str(dataframe[col].dtypes) in ["category", "object"]]
 
     cat_cols = cat_cols + num_but_cat
+
+    cat_cols = [col for col in cat_cols if col not in cat_but_car]
