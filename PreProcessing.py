@@ -290,3 +290,4 @@ def rare_encoder(dataframe, rare_perc):
                     and (temp_df[col].value_counts() / len(temp_df) < rare_perc).any(axis=None)]
 
     for var in rare_columns:
+        tmp = temp_df[var].value_counts() / len(temp_df)
