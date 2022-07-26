@@ -153,3 +153,4 @@ def replace_with_thresholds(dataframe, variable):
     Variable name whose outlier will be suppressed
     :return: no return
     """
+    low_limit, up_limit = outlier_thresholds(dataframe, variable)
