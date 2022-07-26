@@ -175,3 +175,5 @@ def missing_values_table(dataframe, na_name=False):
     """
 
     na_columns = [col for col in dataframe.columns if dataframe[col].isnull().sum() > 0]
+
+    n_miss = dataframe[na_columns].isnull().sum().sort_values(ascending=False)
