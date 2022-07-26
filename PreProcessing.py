@@ -96,3 +96,6 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
     print(f'num_but_cat: {len(num_but_cat)}')
 
     return cat_cols, num_cols, cat_but_car
+
+
+# Accessing outliers
