@@ -181,3 +181,5 @@ def missing_values_table(dataframe, na_name=False):
     ratio = (dataframe[na_columns].isnull().sum() / dataframe.shape[0] * 100).sort_values(ascending=False)
 
     missing_df = pd.concat([n_miss, np.round(ratio, 2)], axis=1, keys=['n_miss', 'ratio'])
+
+    print(missing_df, end="\n")
