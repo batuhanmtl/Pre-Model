@@ -10,3 +10,4 @@ def check_df(dataframe, head=5):
     :return: no return
     """
     print("##################### Shape #####################")
+    print(dataframe.shape)
