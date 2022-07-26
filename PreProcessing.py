@@ -95,3 +95,5 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
     print(f'num_cols: {len(num_cols)}')
     print(f'cat_but_car: {len(cat_but_car)}')
     print(f'num_but_cat: {len(num_but_cat)}')
+
+    return cat_cols, num_cols, cat_but_car
