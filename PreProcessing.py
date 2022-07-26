@@ -76,3 +76,7 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
 
     num_but_cat = [col for col in dataframe.columns if
                    dataframe[col].nunique() < 10 and dataframe[col].dtypes in ["int", "float"]]
+
+    cat_but_car = [col for col in dataframe.columns if
+                   dataframe[col].nunique() > 20 and str(dataframe[col].dtypes) in ["category", "object"]]
+
