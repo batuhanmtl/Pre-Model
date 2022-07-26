@@ -156,3 +156,5 @@ def replace_with_thresholds(dataframe, variable):
     low_limit, up_limit = outlier_thresholds(dataframe, variable)
 
     dataframe.loc[(dataframe[variable] < low_limit), variable] = low_limit
+
+    dataframe.loc[(dataframe[variable] > up_limit), variable] = up_limit
