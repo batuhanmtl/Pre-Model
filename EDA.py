@@ -96,3 +96,54 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
         num_but_cat is inside cat_cols.
 
     """
+
+    # cat_cols, cat_but_car
+    cat_cols = [col for col in dataframe.columns if str(dataframe[col].dtypes) in ["category", "object", "bool"]]
+
+    num_but_cat = [col for col in dataframe.columns if
+                   dataframe[col].nunique() < 10 and dataframe[col].dtypes in ["int", "float"]]
+
+    cat_but_car = [col for col in dataframe.columns if
+                   dataframe[col].nunique() > 20 and str(dataframe[col].dtypes) in ["category", "object"]]
+
+    cat_cols = cat_cols + num_but_cat
+    cat_cols = [col for col in cat_cols if col not in cat_but_car]
+
+    num_cols = [col for col in dataframe.columns if dataframe[col].dtypes in ["int", "float"]]
+    num_cols = [col for col in num_cols if col not in cat_cols]
+
+    print(f"Observations: {dataframe.shape[0]}")
+    print(f"Variables: {dataframe.shape[1]}")
+    print(f'cat_cols: {len(cat_cols)}')
+    print(f'num_cols: {len(num_cols)}')
+    print(f'cat_but_car: {len(cat_but_car)}')
+    print(f'num_but_cat: {len(num_but_cat)}')
+
+    return cat_cols, num_cols, cat_but_car
+
+
+# Analysis of Correlation
+
+def high_corr_cols(dataframe, plot=False, corr_th=0.90):
+    """
+
+    :param dataframe: is the dataframe whose variable names are to be retrieved.
+    :param plot: bool
+    :param corr_th: upper limit of correlation, default 0.9, int or float
+    :return: high correlation columns names list
+    """
+
+    corr = dataframe.corr()
+
+    cor_matrix = corr.abs()
+    upper_triangle_matrix = cor_matrix.where(np.triu(np.ones(cor_matrix.shape), k=1).astype(bool))
+    drop_list = [col for col in upper_triangle_matrix.columns if any(upper_triangle_matrix[col] > corr_th)]
+
+    if plot:
+        import seaborn as sns
+        import matplotlib.pyplot as plt
+        sns.set(rc={'figure.figsize': (15, 15)})
+        sns.heatmap(corr, cmap="RdBu")
+        plt.show()
+
+    return drop_list
