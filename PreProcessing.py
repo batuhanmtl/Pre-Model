@@ -283,3 +283,5 @@ def rare_encoder(dataframe, rare_perc):
     :return: Pandas.DataFrame
     Concatenated dataframe of rare values
     """
+
+    temp_df = dataframe.copy()
