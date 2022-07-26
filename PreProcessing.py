@@ -189,3 +189,19 @@ def missing_values_table(dataframe, na_name=False):
 
 
 # Examining the Relationship of Missing Values with the Dependent Variable
+
+
+def missing_vs_target(dataframe, target, na_columns):
+    """
+    It shows the proportional relationship of the
+    missing values with respect to the target variable.
+
+    :param dataframe: Pandas.DataFrame
+
+    :param target: string
+    Target name
+
+    :param na_columns: list
+
+    :return: no return
+    """
