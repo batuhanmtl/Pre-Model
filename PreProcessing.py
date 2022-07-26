@@ -265,3 +265,6 @@ def rare_analyser(dataframe, target, cat_cols):
     categorical variables name
     :return: no return
     """
+
+    for col in cat_cols:
+        print(col, ":", len(dataframe[col].value_counts()))
