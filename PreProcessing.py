@@ -274,3 +274,5 @@ def rare_analyser(dataframe, target, cat_cols):
 
 
 # Rare Encoder
+
+def rare_encoder(dataframe, rare_perc):
