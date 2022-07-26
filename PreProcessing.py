@@ -125,3 +125,13 @@ def grab_outliers(dataframe, col_name, index=False):
 
 
 # Delete outlier value
+
+
+def remove_outlier(dataframe, col_name):
+    """
+    Delete outlier value
+    :param dataframe: Pandas.DataFrame
+    :param col_name: string
+    variable name to delete outlier
+    :return: outlier deleted dataframe
+    """
