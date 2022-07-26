@@ -277,3 +277,10 @@ def rare_analyser(dataframe, target, cat_cols):
 
 def rare_encoder(dataframe, rare_perc):
     """
+
+        :param dataframe: Pandas.DataFrame
+        :param rare_perc: int or float
+        Rarity percentage
+        :return: Pandas.DataFrame
+        Concatenated dataframe of rare values
+    """
