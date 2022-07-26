@@ -47,3 +47,6 @@ def check_outlier(dataframe, col_name):
 
     else:
         return False
+
+
+# Capturing Categorical and Numeric Variables and Generalizing Operations
