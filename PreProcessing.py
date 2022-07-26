@@ -252,3 +252,6 @@ def one_hot_encoder(dataframe, categorical_cols, drop_first=True):
                                drop_first=drop_first)
 
     return dataframe
+
+
+# Rare Analyser
