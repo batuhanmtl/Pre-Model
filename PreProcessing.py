@@ -88,7 +88,6 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
 
     num_cols = [col for col in num_cols if col not in cat_cols]
 
-
     print(f"Observations: {dataframe.shape[0]}")
     print(f"Variables: {dataframe.shape[1]}")
     print(f'cat_cols: {len(cat_cols)}')
