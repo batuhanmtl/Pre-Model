@@ -9,3 +9,4 @@ def check_df(dataframe, head=5):
     :param head: the number of data we want to observe starting from the beginning(default head = 5)
     :return: no return
     """
+    print("##################### Shape #####################")
