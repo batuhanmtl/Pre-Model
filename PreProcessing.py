@@ -50,3 +50,23 @@ def check_outlier(dataframe, col_name):
 
 
 # Capturing Categorical and Numeric Variables and Generalizing Operations
+
+
+def grab_col_names(dataframe, cat_th=10, car_th=20):
+    """
+    It gives the names of categorical, numerical and categorical but cardinal variables in the data set.
+    :param dataframe: is the dataframe whose variable names are to be retrieved.
+    :param cat_th: (optional default=10)class threshold for numeric but categorical variables. int or float
+    :param car_th: (optional default=20) class threshold for categorical but cardinal variables. int or float
+    :return: cat_cols: list
+         Categorical variable list
+     num_cols: list
+         Numeric variable list
+     cat_but_car: list
+         Categorical view cardinal variable list
+
+    notes:
+        cat_cols + num_cols + cat_but_car = total number of variables
+        num_but_cat is inside cat_cols.
+
+    """
