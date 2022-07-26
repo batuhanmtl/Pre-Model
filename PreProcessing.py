@@ -216,3 +216,6 @@ def missing_vs_target(dataframe, target, na_columns):
     for col in na_flags:
         print(pd.DataFrame({"TARGET_MEAN": temp_df.groupby(col)[target].mean(),
                             "Count": temp_df.groupby(col)[target].count()}), end="\n\n\n")
+
+
+# Label Encoding
