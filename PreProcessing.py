@@ -144,3 +144,12 @@ def remove_outlier(dataframe, col_name):
 
 
 # re-assignment with thresholds
+
+def replace_with_thresholds(dataframe, variable):
+    """
+    Replace outliers with threshold values.
+    :param dataframe: Pandas.DataFrame
+    :param variable: string
+    Variable name whose outlier will be suppressed
+    :return: no return
+    """
