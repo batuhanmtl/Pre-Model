@@ -228,3 +228,5 @@ def label_encoder(dataframe, binary_col):
     :param binary_col: binary variable name list
     :return: Encoded dataframe
     """
+
+    from sklearn.preprocessing import LabelEncoder
