@@ -161,3 +161,15 @@ def replace_with_thresholds(dataframe, variable):
 
 
 # Capturing missing values
+
+
+def missing_values_table(dataframe, na_name=False):
+    """
+    Displays the ratio of missing values in the variable.
+    na_col If True, it returns a list of the names of the
+    variables with missing values.
+    :param dataframe:Pandas.DataFrame
+    :param na_name: bool
+    :return: list of the names of the
+    variables with missing values
+    """
