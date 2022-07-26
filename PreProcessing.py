@@ -291,3 +291,4 @@ def rare_encoder(dataframe, rare_perc):
 
     for var in rare_columns:
         tmp = temp_df[var].value_counts() / len(temp_df)
+        rare_labels = tmp[tmp < rare_perc].index
