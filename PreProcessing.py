@@ -14,3 +14,5 @@ def outlier_thresholds(dataframe, col_name, q1=0.25, q3=0.75):
     :param q3: quantile 3 int or float (optional default 0.75)
     :return: int or float , low limit and up limit
     """
+
+    quartile1 = dataframe[col_name].quantile(q1)
