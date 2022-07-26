@@ -255,3 +255,13 @@ def one_hot_encoder(dataframe, categorical_cols, drop_first=True):
 
 
 # Rare Analyser
+
+def rare_analyser(dataframe, target, cat_cols):
+    """
+    Shows analysis of rare data
+    :param dataframe: Pandas.DataFrame
+    :param target: target variable
+    :param cat_cols: string
+    categorical variables name
+    :return: no return
+    """
