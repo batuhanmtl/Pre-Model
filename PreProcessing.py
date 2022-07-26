@@ -99,3 +99,14 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
 
 
 # Accessing outliers
+
+def grab_outliers(dataframe, col_name, index=False):
+    """
+    Displays observations containing outliers.
+    If Index = True, returns indexes containing outliers
+
+    :param dataframe: Pandas.DataFrame
+    :param col_name: Variable name whose outliers will be check
+    :param index: bool
+    :return: list of outlier index
+    """
