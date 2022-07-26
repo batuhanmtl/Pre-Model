@@ -38,3 +38,5 @@ def check_outlier(dataframe, col_name):
     Variable name whose outliers will be check
     :return: bool
     """
+
+    low_limit, up_limit = outlier_thresholds(dataframe, col_name)
