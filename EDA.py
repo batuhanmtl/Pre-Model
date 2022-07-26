@@ -11,3 +11,4 @@ def check_df(dataframe, head=5):
     """
     print("##################### Shape #####################")
     print(dataframe.shape)
+    print("##################### Types #####################")
