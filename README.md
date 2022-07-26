@@ -4,7 +4,8 @@
 - Variables with numeric data 
 - Variables with categorical but high cardinality data 
 - Variables that contain numeric but categorical data 
-- General information about the dataset - Categorical variables analysis  
+- General information about the dataset 
+- Categorical variables analysis  
 - Numerical variables analysis  
 - Target variable analysis  
 - Analysis of target variables with categorical variables  
