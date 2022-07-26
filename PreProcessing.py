@@ -90,3 +90,4 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
 
 
     print(f"Observations: {dataframe.shape[0]}")
+    print(f"Variables: {dataframe.shape[1]}")
