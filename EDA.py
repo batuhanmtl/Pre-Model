@@ -129,6 +129,12 @@ def target_summary_with_cat(dataframe, target, categorical_col):
     print(pd.DataFrame({"TARGET_MEAN": dataframe.groupby(categorical_col)[target].mean()}), end="\n\n\n")
 
 
+# Analysis of Target Variable with Numerical Variables
+
+def target_summary_with_num(dataframe, target, numerical_col):
+    print(dataframe.groupby(target).agg({numerical_col: "mean"}), end="\n\n\n")
+
+
 # Analysis of Correlation
 
 def high_corr_cols(dataframe, plot=False, corr_th=0.90):
