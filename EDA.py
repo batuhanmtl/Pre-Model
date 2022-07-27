@@ -123,6 +123,12 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
     return cat_cols, num_cols, cat_but_car
 
 
+# Analysis of the Target Variable with Categorical Variables
+
+def target_summary_with_cat(dataframe, target, categorical_col):
+    print(pd.DataFrame({"TARGET_MEAN": dataframe.groupby(categorical_col)[target].mean()}), end="\n\n\n")
+
+
 # Analysis of Correlation
 
 def high_corr_cols(dataframe, plot=False, corr_th=0.90):
